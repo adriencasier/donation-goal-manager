@@ -1,1 +1,1 @@
-# donation-goal-manager-server
+# donation-goal-manager-core
