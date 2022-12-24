@@ -1,4 +1,4 @@
-# core Project
+# Donation Goal Manager Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
@@ -66,30 +66,3 @@ If you want to learn more about building native executables, please consult http
   authenticate users with Authorization Code Flow
 - Scheduler - tasks ([guide](https://quarkus.io/guides/scheduler)): Schedule jobs and tasks
 
-## Provided Code
-
-### YAML Config
-
-Configure your application with YAML
-
-[Related guide section...](https://quarkus.io/guides/config-reference#configuration-examples)
-
-The Quarkus application configuration is located in `src/main/resources/application.yml`.
-
-### Hibernate ORM
-
-Create your first JPA entity
-
-[Related guide section...](https://quarkus.io/guides/hibernate-orm)
-
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
-
-### WebSockets
-
-WebSocket communication channel starter code
-
-[Related guide section...](https://quarkus.io/guides/websockets)
