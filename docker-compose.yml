@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  keycloak:
+    container_name: keycloak
+    env_file:
+      - keycloak.dev.env
+    ports:
+      - "8070:8080"
+    image: quay.io/keycloak/keycloak:latest
+    command:
+      - --verbose start-dev --auto-build
+    restart: "on-failure"
+    depends_on:
+      - postgres
+    networks:
+      - db
+      - sso
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    env_file:
+      - postgres.dev.env
+    environment:
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - db
+
+networks:
+  db:
+  sso:
+volumes:
+  postgres:

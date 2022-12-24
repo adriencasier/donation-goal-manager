@@ -1,0 +1,32 @@
+greeting:
+  message: "hello"
+quarkus:
+  datasource:
+    devservices:
+      enabled: false
+    username: dgm
+    password: change-me
+    reactive:
+      url: postgresql://localhost:5432/dgm
+      max-size: 20
+  hibernate-orm:
+    database:
+      generation:
+        create-schemas: true
+  oidc:
+    client-id: backend
+    auth-server-url: http://localhost:8070/realms/dgm
+    application-type: SERVICE
+    credentials:
+      secret: XSqYirVx4m6pxk0Di79yIh4Oq5ocQdIL
+    authentication:
+      user-info-required: true
+  keycloak:
+    devservices:
+      enabled: false
+  http:
+    port: 8000
+  banner:
+    path: banner.txt
+    enabled: true
+
